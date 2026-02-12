@@ -1,14 +1,8 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './Layout/Navbar'
-import Header from './Layout/Header'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import PakApp from './pages/PakApp'
-import Quiz from './pages/Quiz'
-import PastPapers from './pages/PastPapers'
-import SubmitMCQS from './pages/SubmitMcqs'
-import Footer from './Layout/Footer'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Layout/Navbar";
+import Header from "./Layout/Header";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -17,6 +11,7 @@ const App = () => {
       <Navbar />
       <Header />
 
+      {/* Added MT-8 (Margin Top) so content shows below the headers */}
       <main className="max-w-7xl mx-auto px-4 mt-8 pb-10">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,16 +20,42 @@ const App = () => {
           <Route path="/app" element={<PakApp />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/past-papers" element={<PastPapers />} />
-          <Route path="/submit" element={<SubmitMCQS />} />
+          <Route path="/submit" element={<SubmitMcqs />} />
         </Routes>
       </main>
-      <Footer/>
     </div>
-  )
-}
+  );
+};
 
+const About = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">
+    About Us Page
+  </div>
+);
+const Contact = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">
+    Contact Us Page
+  </div>
+);
+const PakApp = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">
+    Download Our App
+  </div>
+);
+const Quiz = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">
+    Start Quiz Section
+  </div>
+);
+const PastPapers = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">
+    Past Papers Collection
+  </div>
+);
+const SubmitMcqs = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">
+    Submit Your MCQs
+  </div>
+);
 
-
-
-
-export default App
+export default App;
