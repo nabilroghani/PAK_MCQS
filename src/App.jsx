@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './Layout/Navbar'
 import Header from './Layout/Header'
+import About from './pages/About'
 
 const App = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => (
   </div>
 );
 
-const About = () => <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">About Us Page</div>;
+// const About = () => <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">About Us Page</div>;
 const Contact = () => <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">Contact Us Page</div>;
 const PakApp = () => <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">Download Our App</div>;
 const Quiz = () => <div className="p-10 text-center text-2xl bg-white shadow rounded-lg">Start Quiz Section</div>;
