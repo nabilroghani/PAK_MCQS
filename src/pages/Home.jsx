@@ -1,9 +1,10 @@
 import React from "react";
+import MCQS_cart from "../Components/MCQS_cart";
 
 export default function Home() {
   return (
     <div>
-      <H1>welocme ot home</H1>
+      <MCQS_cart />
     </div>
   );
 }

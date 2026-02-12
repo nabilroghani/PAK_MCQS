@@ -1,14 +1,16 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './Layout/Navbar'
-import Header from './Layout/Header'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import PakApp from './pages/PakApp'
-import Quiz from './pages/Quiz'
-import PastPapers from './pages/PastPapers'
-import SubmitMCQS from './pages/SubmitMcqs'
-import Footer from './Layout/Footer'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Layout/Navbar";
+import Header from "./Layout/Header";
+import Home from "./pages/Home";
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import PakApp from "./pages/PakApp"
+import Quiz from "./pages/Quiz"
+import PastPapers from "./pages/PastPapers"
+import SubmitMcqs from "./pages/SubmitMcqs"
+import Footer from "./Layout/Footer"
+
 
 const App = () => {
   return (
@@ -17,29 +19,20 @@ const App = () => {
       <Navbar />
       <Header />
 
+      {/* Added MT-8 (Margin Top) so content shows below the headers */}
       <main className="max-w-7xl mx-auto px-4 mt-8 pb-10">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={< About/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/app" element={<PakApp />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/past-papers" element={<PastPapers />} />
-          <Route path="/submit" element={<SubmitMCQS />} />
+          <Route path="/submit" element={<SubmitMcqs />} />
         </Routes>
       </main>
       <Footer/>
     </div>
-  )
-}
-
-// Fixed Dummy Components with background and padding to be clearly visible
-const Home = () => (
-  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg border border-gray-200">
-    Home Page - Welcome to PakMCQS
-  </div>
-);
-
-
-
-export default App
+  );
+};
+export default App;
