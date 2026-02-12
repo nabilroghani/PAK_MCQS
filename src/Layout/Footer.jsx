@@ -6,7 +6,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white pt-16 pb-8 px-6 md:px-12 mt-20">
+    <footer className="bg-[#0f172a] text-white pt-16 pb-8 px-6 md:px-12 mt-20">
       <div className="max-w-7xl mx-auto">
         
         {/* Top Section: Grid Layout */}

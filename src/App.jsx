@@ -33,7 +33,12 @@ const App = () => {
   )
 }
 
-
+// Fixed Dummy Components with background and padding to be clearly visible
+const Home = () => (
+  <div className="p-10 text-center text-2xl bg-white shadow rounded-lg border border-gray-200">
+    Home Page - Welcome to PakMCQS
+  </div>
+);
 
 
 
