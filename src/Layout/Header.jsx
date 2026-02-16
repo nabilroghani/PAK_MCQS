@@ -25,7 +25,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="bg-blue-950 text-white shadow-xl sticky top-14 z-[90]">
+        <header className="bg-[#0f172a] text-white shadow-xl sticky top-14 z-[90]">
             <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
 
                 {/* 1. LOGO */}
