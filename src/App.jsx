@@ -10,6 +10,8 @@ import Quiz from "./pages/Quiz";
 import PastPapers from "./pages/PastPapers";
 import SubmitMcqs from "./pages/SubmitMcqs";
 import Footer from "./Layout/Footer";
+import GK_MCQs from "./pages/GK_MCQs";
+import PakStudy_MCQs from "./pages/PakStudy_MCQs";
 
 const App = () => {
   return (
@@ -22,21 +24,19 @@ const App = () => {
       <main className="max-w-7xl mx-auto px-4 mt-8 pb-10">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={< About/>} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/app" element={<PakApp />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/past-papers" element={<PastPapers />} />
           <Route path="/submit" element={<SubmitMcqs />} />
+          <Route path="/gk-mcqs" element={<GK_MCQs />} />
+          <Route path="/pak-study" element={<PakStudy_MCQs />} />
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
-<<<<<<< HEAD
- 
+
 export default App;
-=======
-export default App;
->>>>>>> a950cb80da529e21648e7c7240c0f1c6437c0380
