@@ -40,7 +40,9 @@ export default function GK_MCQs() {
                 Now you can submit latest General Knowledge MCQs.
               </p>
 
-              <button className=" font-bold ">SUBMIT HERE</button>
+              <button className="font-bold rounded hover:text-green-800 cursor-pointer transition duration-300">
+                SUBMIT HERE
+              </button>
             </div>
           </div>
 

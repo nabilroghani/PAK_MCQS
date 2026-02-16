@@ -12,6 +12,8 @@ import SubmitMcqs from "./pages/SubmitMcqs";
 import Footer from "./Layout/Footer";
 import GK_MCQs from "./pages/GK_MCQs";
 import PakStudy_MCQs from "./pages/PakStudy_MCQs";
+import Islamci_MCQs from "./pages/Islamci_MCQs";
+import EveryDay_sci from "./pages/EveryDay_sci";
 
 const App = () => {
   return (
@@ -32,6 +34,8 @@ const App = () => {
           <Route path="/submit" element={<SubmitMcqs />} />
           <Route path="/gk-mcqs" element={<GK_MCQs />} />
           <Route path="/pak-study" element={<PakStudy_MCQs />} />
+          <Route path="/islamic-studies" element={<Islamci_MCQs />} />
+          <Route path="/everyday-science" element={<EveryDay_sci />} />
         </Routes>
       </main>
       <Footer />
