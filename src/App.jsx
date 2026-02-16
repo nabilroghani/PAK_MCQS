@@ -14,6 +14,8 @@ import GK_MCQs from "./pages/GK_MCQs";
 import PakStudy_MCQs from "./pages/PakStudy_MCQs";
 import Islamci_MCQs from "./pages/Islamci_MCQs";
 import EveryDay_sci from "./pages/EveryDay_sci";
+import WorldCurrentAffairs from "./pages/WorldCurrentAffairs";
+import PakistanCurrentAffairs from "./pages/PakistanCurrentAffairs";
 
 const App = () => {
   return (
@@ -36,6 +38,9 @@ const App = () => {
           <Route path="/pak-study" element={<PakStudy_MCQs />} />
           <Route path="/islamic-studies" element={<Islamci_MCQs />} />
           <Route path="/everyday-science" element={<EveryDay_sci />} />
+          <Route path="/pakistan-current-affairs" element={<PakistanCurrentAffairs/>}/>
+          <Route path="/world-current-affairs" element={<WorldCurrentAffairs/>}/>
+
         </Routes>
       </main>
       <Footer />
