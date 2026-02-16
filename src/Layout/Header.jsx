@@ -117,10 +117,13 @@ const Header = () => {
             <FaSearch className="absolute right-3 top-2.5 text-gray-400 size-3" />
           </div>
 
-          <button className="flex items-center justify-center gap-2 bg-[#059669] hover:bg-[#10b981] text-white px-5 py-2.5 rounded-2xl text-[12px] font-black uppercase tracking-widest transition-all duration-300 shadow-lg shadow-green-900/20 hover:shadow-green-500/40 active:scale-95 whitespace-nowrap border-b-4 border-[#064e3b] hover:border-[#059669]">
-            <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></div>
-            MCQS MODE
-          </button>
+          <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] text-white px-4 py-1.5 rounded-lg text-[13px] font-bold shadow-sm transition-all duration-300 active:scale-95 whitespace-nowrap">
+  {/* Chota Question Mark */}
+  <span className=" font-black">?</span>
+  
+  {/* Compact Text */}
+  <span className="tracking-normal">Quiz Mode</span>
+</button>
         </div>
       </div>
 
