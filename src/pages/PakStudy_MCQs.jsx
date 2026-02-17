@@ -6,7 +6,7 @@ export default function PakStudy_MCQs() {
   return (
     <div className="min-h-screen">
       {/* Main Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2.5fr_1.2fr] gap-8 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2.5fr_1.1fr] gap-8 items-start">
         {/* ================= LEFT SIDE ================= */}
         <div className="rounded-2xl  p-4">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
