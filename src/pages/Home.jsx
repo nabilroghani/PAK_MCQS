@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <div className="min-h-screen  ">
       {/* --- Hero Image Section --- */}
-      <div className="w-full overflow-hidden shadow-lg border-b-4 border-emerald-600">
+      <div className="w-full overflow-hidden shadow-lg border-b-4 border-emerald-600 rounded-[1rem]">
         <img 
           src={home} 
           alt="Home Banner" 
-          className="w-full h-auto object-cover max-h-[250px] md:max-h-[450px]"
+          className="w-full h-auto object-cover max-h-[250px] md:max-h-[450px] rounded-[1rem]"
         />
       </div>
 
