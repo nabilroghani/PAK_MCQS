@@ -5,11 +5,11 @@ import MCQs_Cart_leftSide from "./MCQs_Cart_leftSide.jsx";
 
 export default function MCQS_cart() {
   return (
-    <div className="p-4 md:p-8 bg-gray-100 min-h-screen flex justify-center">
-      {/* Left side: MCQs   */}
-      <MCQs_Cart_leftSide />
-      {/* right side  */}
-      <MCQs_cart_RightSide />
+    <div className="min-h-screen flex flex-col md:flex-row gap-10 justify-center">
+      {/* Left Side */}
+      <MCQs_Cart_leftSide className="w-full md:w-[70%]" />
+
+      <MCQs_cart_RightSide className=" w-full md:w-[30%]" />
     </div>
   );
 }

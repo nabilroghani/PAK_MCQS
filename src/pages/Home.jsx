@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen  ">
       {/* --- Hero Image Section --- */}
       <div className="w-full overflow-hidden shadow-lg border-b-4 border-emerald-600">
         <img 
@@ -17,9 +17,9 @@ export default function Home() {
 
       {/* --- Premium WhatsApp Section --- */}
       {/* Mobile pe mt-6 (normal gap), Desktop pe md:-mt-12 (overlap effect) */}
-      <div className="max-w-7xl mx-auto px-4 mt-6 md:-mt-12 relative z-10 mb-12">
-        <div className="bg-white border-b-4 border-emerald-800 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+      <div className="max-w-7xl  mx-auto px-4 mt-6 md:-mt-12 relative z-10 mb-12">
+        <div className="bg-white border-b-4 border-emerald-800 p-6 md:p-8 rounded-[1rem] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-center md:text-left ">
             <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-tight">
               JOIN OUR <span className="text-emerald-600 uppercase">Study Group</span>
             </h2>

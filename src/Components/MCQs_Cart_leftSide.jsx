@@ -32,7 +32,7 @@ export default function MCQs_Cart_leftSide({ className = "" }) {
   };
 
   return (
-    <div className={`w-full md:w-5/5   ${className}   `}>
+    <div className={`w-full   ${className}   `}>
       {currentMCQs.map(
         ({ id, question, options, correctAnswer, submited, readmore }) => (
           <div
@@ -83,23 +83,25 @@ export default function MCQs_Cart_leftSide({ className = "" }) {
       )}
 
       {/* Pagination */}
-      <div>
-        <div className="flex justify-between  items-center space-x-2 mt-4">
+      <div className="mt-6">
+        {/* Pagination Controls */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Previous Button */}
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
-            className="px-3 py-1 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-400"
+            className="w-full sm:w-auto px-4 py-2 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-400 transition"
           >
             Previous
           </button>
 
-          <div className="flex gap-5">
-            {/* Page Numbers */}
+          {/* Page Numbers */}
+          <div className="flex flex-wrap justify-center gap-2">
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i + 1}
                 onClick={() => goToPage(i + 1)}
-                className={`px-3 py-1 rounded w-10 ${
+                className={`px-3 py-2 min-w-[40px] rounded transition ${
                   currentPage === i + 1
                     ? "bg-blue-500 text-white"
                     : "bg-gray-300 hover:bg-gray-400"
@@ -110,18 +112,23 @@ export default function MCQs_Cart_leftSide({ className = "" }) {
             ))}
           </div>
 
+          {/* Next Button */}
           <button
             onClick={nextPage}
             disabled={currentPage === totalPages}
-            className="px-3 py-1 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-400"
+            className="w-full sm:w-auto px-4 py-2 bg-gray-300 rounded disabled:opacity-50 hover:bg-gray-400 transition"
           >
             Next
           </button>
         </div>
+
+        {/* Jump To Section */}
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md mx-auto mt-6">
           <input
-            type="text"
-            placeholder="Jump to"
+            type="number"
+            min="1"
+            max={totalPages}
+            placeholder="Jump to page"
             className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition w-full"
           />
           <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition w-full sm:w-auto">
