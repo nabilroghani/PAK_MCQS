@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 
 const Header = () => {
-  // Dropdown toggles for mobile
   const [isMobileUrduOpen, setIsMobileUrduOpen] = useState(false);
-  const [isMobileCAOpen, setIsMobileCAOpen] = useState(false); // Current Affairs mobile state
+  const [isMobileCAOpen, setIsMobileCAOpen] = useState(false); 
 
   const mainLinks = [
-    { name: "GK Mcqs", path: "/gk-mcqs" },
     { name: "Pak Study", path: "/pak-study" },
     { name: "Islamic Studies", path: "/islamic-studies" },
+    { name: "GK Mcqs", path: "/gk-mcqs" },
     { name: "Everyday Science", path: "/everyday-science" },
   ];
 
@@ -22,23 +21,25 @@ const Header = () => {
     { name: "Computer", path: "/computer" },
     { name: "Maths", path: "/maths" },
     { name: "English", path: "/english" },
+    { name: "Urdu", path: "/urdu" },
   ];
 
-  // Naya Current Affairs data
   const currentAffairsLinks = [
     { name: "Pakistan Current Affairs", path: "/pakistan-current-affairs" },
     { name: "World Current Affairs", path: "/world-current-affairs" },
   ];
 
   return (
-    <header className="bg-[#0f172a] text-white shadow-xl sticky top-14 z-[90]">
+    // Background ko Slate-50 kiya hai (Off-white) aur text ko Gray-800
+    <header className="bg-[#f8fafc] text-gray-800 shadow-lg sticky top-14 z-[90] border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
-        {/* 1. LOGO */}
+        
+        {/* 1. LOGO - Dark Blue color */}
         <Link to="/" className="flex-shrink-0">
-          <h1 className="text-xl md:text-2xl font-black tracking-tighter italic">
-            PAK<span className="text-cyan-400">LEARNERS</span>
-          </h1>
-        </Link>
+  <h1 className="text-xl md:text-2xl font-black tracking-tighter italic text-[#444444]">
+    PAK LEARNERS
+  </h1>
+</Link>
 
         {/* 2. NAVIGATION (Desktop) */}
         <nav className="hidden xl:flex items-center">
@@ -47,7 +48,7 @@ const Header = () => {
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className="px-3 py-5 text-[12px] font-bold uppercase tracking-wider hover:text-cyan-400 transition-all whitespace-nowrap"
+                  className="px-3 py-5 text-[12px] font-bold uppercase tracking-wider hover:text-cyan-600 transition-all whitespace-nowrap text-gray-700"
                 >
                   {link.name}
                 </Link>
@@ -56,7 +57,7 @@ const Header = () => {
 
             {/* Current Affairs Dropdown Desktop */}
             <li className="relative group">
-              <button className="flex items-center gap-1 px-3 py-5 text-[12px] font-bold uppercase tracking-wider hover:text-cyan-400 transition-all outline-none">
+              <button className="flex items-center gap-1 px-3 py-5 text-[12px] font-bold uppercase tracking-wider hover:text-cyan-600 text-gray-700 transition-all outline-none">
                 Current Affairs{" "}
                 <FaChevronDown
                   size={10}
@@ -79,10 +80,10 @@ const Header = () => {
               </div>
             </li>
 
-            {/* Urdu Dropdown Desktop */}
+            {/* Other Dropdown Desktop */}
             <li className="relative group">
-              <button className="flex items-center gap-1 px-3 py-5 text-[12px] font-bold uppercase tracking-wider hover:text-cyan-400 transition-all outline-none">
-                Urdu{" "}
+              <button className="flex items-center gap-1 px-3 py-5 text-[12px] font-bold uppercase tracking-wider hover:text-cyan-600 text-gray-700 transition-all outline-none">
+                Other{" "}
                 <FaChevronDown
                   size={10}
                   className="group-hover:rotate-180 transition-transform"
@@ -106,104 +107,58 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* 3. SEARCH & BUTTONS */}
+        {/* 3. SEARCH */}
         <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end lg:flex-none">
           <div className="relative hidden sm:block">
             <input
               type="text"
               placeholder="Search MCQS..."
-              className="bg-blue-900/50 border border-blue-700 text-sm rounded-full py-1.5 pl-4 pr-10 focus:outline-none focus:border-cyan-400 w-32 md:w-48 transition-all"
+              // Input field ko light background aur dark text diya
+              className="bg-gray-200/50 border border-gray-300 text-gray-800 text-sm rounded-full py-1.5 pl-4 pr-10 focus:outline-none focus:border-cyan-500 w-32 md:w-48 transition-all"
             />
-            <FaSearch className="absolute right-3 top-2.5 text-gray-400 size-3" />
+            <FaSearch className="absolute right-3 top-2.5 text-gray-500 size-3" />
           </div>
-
-          <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] text-white px-4 py-1.5 rounded-lg text-[13px] font-bold shadow-sm transition-all duration-300 active:scale-95 whitespace-nowrap">
-  {/* Chota Question Mark */}
-  <span className=" font-black">?</span>
-  
-  {/* Compact Text */}
-  <span className="tracking-normal">Quiz Mode</span>
-</button>
         </div>
       </div>
 
-      {/* 4. MOBILE SCROLL BAR */}
-      <div className="xl:hidden bg-blue-900/50 border-t border-blue-800 relative">
-        <div className="flex items-center px-4 py-2 space-x-4 text-[11px] font-bold uppercase overflow-x-auto scrollbar-hide">
+      {/* 4. MOBILE SCROLL BAR - Iska background bhi light kiya gaya hai */}
+      <div className="xl:hidden bg-gray-100 border-t border-gray-200 relative">
+        <div className="flex items-center px-4 py-2 space-x-4 text-[11px] font-bold uppercase overflow-x-auto scrollbar-hide text-gray-600">
           {mainLinks.map((l) => (
             <Link
               key={l.name}
               to={l.path}
-              className="whitespace-nowrap hover:text-cyan-400"
+              className="whitespace-nowrap hover:text-cyan-600"
             >
               {l.name}
             </Link>
           ))}
 
-          {/* Mobile Current Affairs Dropdown */}
+          {/* Mobile Dropdowns Text colors adjusted for light background */}
           <div className="relative">
             <button
               onClick={() => {
                 setIsMobileCAOpen(!isMobileCAOpen);
                 setIsMobileUrduOpen(false);
               }}
-              className="flex items-center gap-1 whitespace-nowrap text-white uppercase font-bold outline-none"
+              className="flex items-center gap-1 whitespace-nowrap text-gray-700 uppercase font-bold outline-none"
             >
               Current Affairs{" "}
-              <FaChevronDown
-                size={8}
-                className={`${isMobileCAOpen ? "rotate-180" : ""} transition-transform`}
-              />
+              <FaChevronDown size={8} className={`${isMobileCAOpen ? "rotate-180" : ""}`} />
             </button>
-            {isMobileCAOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-md border-t-2 border-cyan-400 z-[120]">
-                <div className="flex flex-col py-1">
-                  {currentAffairsLinks.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      onClick={() => setIsMobileCAOpen(false)}
-                      className="px-3 py-2 text-[10px] text-gray-700 border-b border-gray-50 active:bg-cyan-50 uppercase"
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
 
-          {/* Mobile Urdu Dropdown */}
           <div className="relative">
             <button
               onClick={() => {
                 setIsMobileUrduOpen(!isMobileUrduOpen);
                 setIsMobileCAOpen(false);
               }}
-              className="flex items-center gap-1 whitespace-nowrap text-cyan-400 uppercase font-bold outline-none"
+              className="flex items-center gap-1 whitespace-nowrap text-cyan-600 uppercase font-bold outline-none"
             >
               Urdu{" "}
-              <FaChevronDown
-                size={8}
-                className={`${isMobileUrduOpen ? "rotate-180" : ""} transition-transform`}
-              />
+              <FaChevronDown size={8} className={`${isMobileUrduOpen ? "rotate-180" : ""}`} />
             </button>
-            {isMobileUrduOpen && (
-              <div className="absolute top-full right-0 mt-2 w-40 bg-white shadow-xl rounded-md border-t-2 border-cyan-400 z-[120]">
-                <div className="flex flex-col py-1 overflow-y-auto max-h-48">
-                  {dropdownLinks.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      onClick={() => setIsMobileUrduOpen(false)}
-                      className="px-3 py-2 text-[10px] text-gray-700 border-b border-gray-50 last:border-none active:bg-cyan-50"
-                    >
-                      {sub.name} Mcqs
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -5,8 +5,6 @@ import Header from "./Layout/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import PakApp from "./pages/PakApp";
-import Quiz from "./pages/Quiz";
 import PastPapers from "./pages/PastPapers";
 import SubmitMcqs from "./pages/SubmitMcqs";
 import Footer from "./Layout/Footer";
@@ -16,6 +14,10 @@ import Islamci_MCQs from "./pages/Islamci_MCQs";
 import EveryDay_sci from "./pages/EveryDay_sci";
 import WorldCurrentAffairs from "./pages/WorldCurrentAffairs";
 import PakistanCurrentAffairs from "./pages/PakistanCurrentAffairs";
+import Biology from "./pages/dropdownPages/Biology";
+import JobUpdates from "./pages/JobUpdates";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import EBooks from "./pages/EBook";
 
 const App = () => {
   return (
@@ -30,16 +32,18 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/app" element={<PakApp />} />
-          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/job-updates" element={<JobUpdates />} />
           <Route path="/past-papers" element={<PastPapers />} />
           <Route path="/submit" element={<SubmitMcqs />} />
+          <Route path="/e-book" element={<EBooks/>}/>
           <Route path="/gk-mcqs" element={<GK_MCQs />} />
           <Route path="/pak-study" element={<PakStudy_MCQs />} />
           <Route path="/islamic-studies" element={<Islamci_MCQs />} />
           <Route path="/everyday-science" element={<EveryDay_sci />} />
           <Route path="/pakistan-current-affairs" element={<PakistanCurrentAffairs/>}/>
           <Route path="/world-current-affairs" element={<WorldCurrentAffairs/>}/>
+          <Route path="/biology" element={<Biology/>}/>
 
         </Routes>
       </main>

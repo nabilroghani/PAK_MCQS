@@ -47,18 +47,20 @@ export default function MCQs_Cart_leftSide({ className = "" }) {
                 <FiMessageCircle />
               </div>
             </div>
-
             {/* Options */}
             <div className="space-y-2 mb-4">
               {options.map((option, index) => (
                 <div
                   key={index}
-                  className="flex items-center p-2 rounded-lg border border-gray-200 hover:bg-blue-50 cursor-pointer transition-colors"
+                  className="group flex items-center p-2 rounded-lg border border-gray-200 hover:bg-[#1565C0] cursor-pointer transition-colors"
                 >
-                  <span className="font-bold w-6">
+                  <span className="font-bold w-6 group-hover:text-white transition-colors">
                     {String.fromCharCode(65 + index)}.
                   </span>
-                  <span className="ml-2 text-gray-800">{option}</span>
+
+                  <span className="ml-2 text-gray-800 group-hover:text-white transition-colors">
+                    {option}
+                  </span>
                 </div>
               ))}
             </div>
@@ -101,11 +103,10 @@ export default function MCQs_Cart_leftSide({ className = "" }) {
               <button
                 key={i + 1}
                 onClick={() => goToPage(i + 1)}
-                className={`px-3 py-2 min-w-[40px] rounded transition ${
-                  currentPage === i + 1
+                className={`px-3 py-2 min-w-[40px] rounded transition ${currentPage === i + 1
                     ? "bg-blue-500 text-white"
                     : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                  }`}
               >
                 {i + 1}
               </button>
