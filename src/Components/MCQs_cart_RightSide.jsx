@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Title from "./Title.jsx";
 import { mcqDataCategory } from "../assets/category.js";
 
@@ -26,17 +25,10 @@ export default function MCQs_cart_RightSide({ className = "" }) {
           <div key={category.id} className="mb-4">
             {/* Category Header */}
             <div
-              className="flex justify-between items-center md:px-2 py-2 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] hover:text-white rounded cursor-pointer"
+              className="flex justify-between items-center md:px-2 py-2 bg-[#1565C0] text-white rounded cursor-pointer"
               onClick={() => toggleDropdown(category.name)}
             >
               <Title text={category.name} />
-
-              {/* dropdown icon remove */}
-              {/* {openMenu[category.name] ? (
-                <FiChevronUp className="text-2xl" />
-              ) : (
-                <FiChevronDown className="text-2xl" />
-              )} */}
             </div>
 
             {/* Subcategories */}

@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* --- Quiz Mode Toggle --- */}
         <div className="flex justify-start mb-10">
-          <button className="flex items-center gap-2 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] text-white px-6 py-2 rounded-xl text-sm font-black shadow-md transition-all active:scale-95">
+          <button className="flex items-center gap-2 bg-[#1565C0] text-white px-6 py-2 rounded-xl text-sm font-black shadow-md transition-all active:scale-95">
             <span>Switch to Quiz Mode</span>
           </button>
         </div>
@@ -138,7 +138,7 @@ export default function Home() {
         {/* --- Category Header --- */}
         <div className="flex items-center justify-end gap-4 mb-6 ">
           <div className="h-[2px] w-[90%] bg-emerald-100"></div>
-          <span className=" w-70 font-black uppercase tracking-widest text-sm bg-emerald-50 px-4 py-1 rounded-full border border-emerald-200 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] text-black hover:text-white">
+          <span className=" w-70 font-black uppercase tracking-widest text-sm px-4 py-1 rounded-full border border-emerald-200 bg-[#1565C0] text-white">
             Explore Categories
           </span>
           <div className="h-[2px] w-[10%] bg-emerald-100"></div>
