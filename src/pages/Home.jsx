@@ -111,17 +111,37 @@ export default function Home() {
                   </Link>
                 </td>
               </tr>
+              <tr>
+                <td className="p-4 hover:bg-emerald-50 transition-colors">
+                  <Link
+                    to="#"
+                    className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2"
+                  >
+                    <span className="text-emerald-500">▶</span> General
+                    Knowledge (MCQs)
+                  </Link>
+                </td>
+                <td className="p-4 hover:bg-emerald-50 transition-colors border-l border-emerald-50">
+                  <Link
+                    to="#"
+                    className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2"
+                  >
+                    <span className="text-emerald-500">▶</span> World Affairs
+                    (MCQs)
+                  </Link>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
 
         {/* --- Category Header --- */}
-        <div className="flex items-center gap-4 mb-6">
-          <div className="h-[2px] flex-1 bg-emerald-100"></div>
-          <span className="text-emerald-800 font-black uppercase tracking-widest text-[10px] bg-emerald-50 px-4 py-1 rounded-full border border-emerald-200">
+        <div className="flex items-center justify-end gap-4 mb-6 ">
+          <div className="h-[2px] w-[90%] bg-emerald-100"></div>
+          <span className=" w-70 font-black uppercase tracking-widest text-sm bg-emerald-50 px-4 py-1 rounded-full border border-emerald-200 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] text-black hover:text-white">
             Explore Categories
           </span>
-          <div className="h-[2px] flex-1 bg-emerald-100"></div>
+          <div className="h-[2px] w-[10%] bg-emerald-100"></div>
         </div>
 
         {/* --- MCQs List --- */}

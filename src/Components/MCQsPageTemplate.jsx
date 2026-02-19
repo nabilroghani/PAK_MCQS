@@ -2,8 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaRegEdit, FaPlayCircle } from "react-icons/fa";
 import MCQs_cart_RightSide from "../Components/MCQs_cart_RightSide";
-import MCQs_Cart_leftSide from "../Components/MCQs_Cart_leftSide";
-
+ 
 const MCQsPageTemplate = ({
   title,
   titleHighlighted,
