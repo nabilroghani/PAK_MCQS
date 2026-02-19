@@ -21,7 +21,7 @@ export const mcqDataCategory = [
   },
   {
     id: 2,
-    name: "Social Sci",
+    name: "Social Sciences",
     subCategories: [
       { id: 1, name: "Finance Mcqs" },
       { id: 2, name: "HRM Mcqs" },

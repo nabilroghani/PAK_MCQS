@@ -4,21 +4,32 @@ import MCQs_Cart_leftSide from "../Components/MCQs_Cart_leftSide";
 
 export default function PakStudy_MCQs() {
   const menuItems = [
-    "1. Pakistan Current Affairs", "2. Pakistan History", "3. Pakistan General Knowledge",
-    "4. Defence & Armed Forces", "5. IMP Days of Pakistan", "6. Mountains and Glaciers",
-    "7. Natural Resources", "8. Culture of Pakistan", "9. Industrial Development",
-    "10. Punjab", "11. Khyber Pakhtoon Khawah", "12. Sindh",
-    "13. Balochistan", "14. ICT FATA AND AJK", "15. Gilgit Baltistan",
-    "16. Land & Climate", "17. Education in Pakistan", "18. Miscellaneous",
+    "1. Pakistan Current Affairs",
+    "2. Pakistan History",
+    "3. Pakistan General Knowledge",
+    "4. Defence & Armed Forces",
+    "5. IMP Days of Pakistan",
+    "6. Mountains and Glaciers",
+    "7. Natural Resources",
+    "8. Culture of Pakistan",
+    "9. Industrial Development",
+    "10. Punjab",
+    "11. Khyber Pakhtoon Khawah",
+    "12. Sindh",
+    "13. Balochistan",
+    "14. ICT FATA AND AJK",
+    "15. Gilgit Baltistan",
+    "16. Land & Climate",
+    "17. Education in Pakistan",
+    "18. Miscellaneous",
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50/50 pb-12">
+    <div className="min-h-screen pb-12">
       {/* Main Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2.5fr_1.1fr] gap-8 items-start px-4 pt-8">
-        
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2.5fr_1.2fr] gap-5 items-start px-4 pt-8">
         {/* ================= LEFT SIDE ================= */}
-        <div className="bg-white rounded-3xl p-4 md:p-8 shadow-sm border border-gray-100">
+        <div className="rounded-3xl p-4 md:p-8  ">
           <h1 className="text-3xl md:text-4xl font-black text-[#1a1a1a] mb-6 tracking-tight">
             Pak Study <span className="text-cyan-600">MCQs</span>
           </h1>
@@ -34,8 +45,12 @@ export default function PakStudy_MCQs() {
 
           {/* Description */}
           <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-            Pak Study MCQs, Get complete MCQs of Pakistan Studies for <span className="font-bold text-gray-800">NTS, FPSC, PPSC, SPSC, CSS, PMS</span> Test Preparation. 
-            Find basic information about Pakistan and different categories related to PakStudy MCQs for 2026.
+            Pak Study MCQs, Get complete MCQs of Pakistan Studies for{" "}
+            <span className="font-bold text-gray-800">
+              NTS, FPSC, PPSC, SPSC, CSS, PMS
+            </span>{" "}
+            Test Preparation. Find basic information about Pakistan and
+            different categories related to PakStudy MCQs for 2026.
           </p>
 
           {/* Menu Section - Refined Design */}
@@ -47,10 +62,10 @@ export default function PakStudy_MCQs() {
             {/* Featured Highlight Links */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <button className="bg-white border-2 border-cyan-100 p-4 rounded-xl text-cyan-700 font-bold hover:bg-cyan-600 hover:text-white transition-all shadow-sm">
-                 🔥 1000 Most Repeated Pak-Study MCQS
+                🔥 1000 Most Repeated Pak-Study MCQS
               </button>
               <button className="bg-white border-2 border-emerald-100 p-4 rounded-xl text-emerald-700 font-bold hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
-                 ⭐ 2000 Import Pak Study MCQS 2026
+                ⭐ 2000 Import Pak Study MCQS 2026
               </button>
             </div>
 
@@ -86,16 +101,17 @@ export default function PakStudy_MCQs() {
 
           {/* MCQs List Section */}
           <div className="mt-10 pt-10 border-t border-gray-100">
-            <h3 className="text-xl font-bold text-gray-800 mb-6">Latest Pak Study Questions:</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-6">
+              Latest Pak Study Questions:
+            </h3>
             <MCQs_Cart_leftSide className="w-full" />
           </div>
         </div>
 
         {/* ================= RIGHT SIDE ================= */}
         <div className="sticky top-24">
-           <MCQs_cart_RightSide />
+          <MCQs_cart_RightSide className="mt-23" />
         </div>
-
       </div>
     </div>
   );

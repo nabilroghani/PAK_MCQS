@@ -20,23 +20,23 @@ export default function MCQs_cart_RightSide({ className = "" }) {
   };
 
   return (
-    <div
-      className={`hidden md:block ${className} pl-6 top-10 self-start`}
-    >
+    <div className={`hidden md:block ${className} pl-6 top-10 self-start`}>
       <div className="bg-white shadow-lg rounded-xl p-6">
         {mcqDataCategory.map((category) => (
           <div key={category.id} className="mb-4">
             {/* Category Header */}
             <div
-              className="flex justify-between items-center px-4 py-2 bg-gray-200 hover:bg-blue-800 hover:text-white rounded cursor-pointer"
+              className="flex justify-between items-center md:px-2 py-2 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] hover:text-white rounded cursor-pointer"
               onClick={() => toggleDropdown(category.name)}
             >
               <Title text={category.name} />
-              {openMenu[category.name] ? (
+
+              {/* dropdown icon remove */}
+              {/* {openMenu[category.name] ? (
                 <FiChevronUp className="text-2xl" />
               ) : (
                 <FiChevronDown className="text-2xl" />
-              )}
+              )} */}
             </div>
 
             {/* Subcategories */}
@@ -45,7 +45,7 @@ export default function MCQs_cart_RightSide({ className = "" }) {
                 {category.subCategories.map((sub) => (
                   <div
                     key={sub.id}
-                    className="px-4 py-2 font-semibold rounded-lg hover:text-blue-600 hover:bg-gray-100 cursor-pointer transition-colors"
+                    className="px-2 py-2 rounded-lg hover:text-blue-600 hover:bg-gray-100 cursor-pointer transition-colors"
                   >
                     {sub.name}
                   </div>

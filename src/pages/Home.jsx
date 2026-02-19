@@ -9,9 +9,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50/30 pb-10">
       {/* Container to align everything with MCQs width */}
       <div className="max-w-7xl mx-auto px-4 pt-6 ">
-
         <div className="flex flex-col lg:flex-row gap-6 mb-12 items-stretch">
-
           <div className="w-full lg:w-[70%] overflow-hidden shadow-lg border-b-4 border-emerald-600 rounded-xl bg-white flex">
             <img
               src={home}
@@ -45,13 +43,11 @@ export default function Home() {
               </a>
             </div>
           </div>
-
         </div>
 
         {/* --- Quiz Mode Toggle --- */}
         <div className="flex justify-start mb-10">
           <button className="flex items-center gap-2 bg-gradient-to-r from-[#6FCF53] to-[#059669] hover:from-[#5eb845] hover:to-[#047857] text-white px-6 py-2 rounded-xl text-sm font-black shadow-md transition-all active:scale-95">
-            <span className="text-lg">?</span>
             <span>Switch to Quiz Mode</span>
           </button>
         </div>
@@ -61,7 +57,10 @@ export default function Home() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-emerald-50">
-                <th colSpan="2" className="p-4 text-emerald-900 font-black text-sm md:text-base uppercase tracking-tight">
+                <th
+                  colSpan="2"
+                  className="p-4 text-emerald-900 font-black text-sm md:text-base uppercase tracking-tight"
+                >
                   🔥 Past Papers & Most Important Repeated MCQs
                 </th>
               </tr>
@@ -69,25 +68,41 @@ export default function Home() {
             <tbody className="text-sm md:text-base">
               <tr className="border-b border-emerald-50">
                 <td className="p-4 hover:bg-emerald-50 transition-colors">
-                  <Link to="#" className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2">
-                    <span className="text-emerald-500">▶</span> Pak Study (1000) MCQs
+                  <Link
+                    to="#"
+                    className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2"
+                  >
+                    <span className="text-emerald-500">▶</span> Pak Study (1000)
+                    MCQs
                   </Link>
                 </td>
                 <td className="p-4 hover:bg-emerald-50 transition-colors border-l border-emerald-50">
-                  <Link to="#" className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2">
-                    <span className="text-emerald-500">▶</span> Islamic Study (1000) MCQs
+                  <Link
+                    to="#"
+                    className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2"
+                  >
+                    <span className="text-emerald-500">▶</span> Islamic Study
+                    (1000) MCQs
                   </Link>
                 </td>
               </tr>
               <tr>
                 <td className="p-4 hover:bg-emerald-50 transition-colors">
-                  <Link to="#" className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2">
-                    <span className="text-emerald-500">▶</span> General Knowledge (1000) MCQs
+                  <Link
+                    to="#"
+                    className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2"
+                  >
+                    <span className="text-emerald-500">▶</span> General
+                    Knowledge (1000) MCQs
                   </Link>
                 </td>
                 <td className="p-4 hover:bg-emerald-50 transition-colors border-l border-emerald-50">
-                  <Link to="#" className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2">
-                    <span className="text-emerald-500">▶</span> World Affairs (1000) MCQs
+                  <Link
+                    to="#"
+                    className="text-slate-700 font-bold hover:text-emerald-600 flex items-center gap-2"
+                  >
+                    <span className="text-emerald-500">▶</span> World Affairs
+                    (1000) MCQs
                   </Link>
                 </td>
               </tr>

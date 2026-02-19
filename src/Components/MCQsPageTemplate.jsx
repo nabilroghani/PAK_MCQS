@@ -17,7 +17,7 @@ const MCQsPageTemplate = ({
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-50/50">
       {/* Grid: left + right */}
-      <div className="grid grid-cols-1 lg:grid-cols-[2.5fr_1.1fr] gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[2.5fr_1.2fr] gap-8 items-start">
         {/* ================= LEFT SIDE ================= */}
         <div className="space-y-8">
           {/* Banner Section */}
