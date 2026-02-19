@@ -52,9 +52,14 @@ export default function Home() {
           </button>
         </div>
 
+        <div class="bg-gray-50/50 mb-5 p-2 px-8 rounded shadow-md  text-end mx-auto text-gray-700 text-base md:text-xl leading-relaxed">
+          یہ وہ ایم سی کیوز ہیں جو پاسٹ پیپرز (گزشتہ پرچوں) سے لیے گئے ہیں اور
+          ہر پیپر میں بار بار آنے والے اہم ترین ایم سی کیوز ہیں۔
+        </div>
+
         {/* --- Table / Links Section --- */}
         <div className="mb-10 overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm">
-          <table className="w-full text-left border-collapse">
+          <table className="w-full text-left   border-collapse">
             <thead>
               <tr className="bg-emerald-50">
                 <th
